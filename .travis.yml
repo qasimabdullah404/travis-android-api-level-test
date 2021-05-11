@@ -20,4 +20,5 @@ before_install:
   - yes | sdkmanager "build-tools;29.0.3"
 
 script:
+- android create avd -n myEmu -t 29
 - emulator -list-avds
