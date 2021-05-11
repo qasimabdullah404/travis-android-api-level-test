@@ -12,7 +12,6 @@ android:
   components:
     - tools
     - platform-tools
-    - tools
 
 before_install:
   - touch $HOME/.android/repositories.cfg
