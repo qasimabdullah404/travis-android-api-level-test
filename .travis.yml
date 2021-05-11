@@ -20,5 +20,5 @@ before_install:
   - yes | sdkmanager "build-tools;29.0.3"
 
 script:
-- android create avd -n myEmu -t 29
+- echo no | Android/Sdk/tools/bin/avdmanager create avd --force --name testAVD --abi google_apis/x86_64 --package 'system-images;android-29;google_apis;x86_64'
 - emulator -list-avds
