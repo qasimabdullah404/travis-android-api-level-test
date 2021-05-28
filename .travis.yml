@@ -5,18 +5,18 @@ jdk: oraclejdk8
 
 env:
   global:
-  - ANDROID_API_LEVEL=29
-  - ANDROID_BUILD_TOOLS_VERSION=29.0.3
+  - ANDROID_API_LEVEL=30
+  - ANDROID_BUILD_TOOLS_VERSION=30
 
-android:
-  components:
-    - tools
-    - platform-tools
+#android:
+#  components:
+#    - tools
+#    - platform-tools
 
 before_install:
   - touch $HOME/.android/repositories.cfg
-  - yes | sdkmanager "platforms;android-29"
-  - yes | sdkmanager "build-tools;31.0.2"
+  - yes | sdkmanager "platforms;android-30"
+  - yes | sdkmanager "build-tools;30"
 
 script:
   - sdkmanager --list
